@@ -6,7 +6,7 @@ Accompanying respository for my Monitorama 2016 talk "Monitoring is Dead: Long L
 
 ## Reading List
 
-* [The Case for Byzantine Fault Detection](https://www.usenix.org/legacy/event/hotdep06/tech/prelim_papers/haeberlen/haeberlen_html/index.html]
+* [The Case for Byzantine Fault Detection](https://www.usenix.org/legacy/event/hotdep06/tech/prelim_papers/haeberlen/haeberlen_html/index.html)
 * [A Fault Detection Service for Wide Area Distributed Computations](http://toolkit.globus.org/ftppub/globus/papers/hbm.pdf)
 * [Fault Management in Distributed Systems](http://repository.upenn.edu/cgi/viewcontent.cgi?article=1960&context=cis_reports)
 * [Adaptive Diagnosis in Distributed Systems](http://www.research.ibm.com/people/r/rish/papers/IEEE.pdf)
