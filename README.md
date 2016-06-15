@@ -14,3 +14,13 @@ Accompanying respository for my Monitorama 2016 talk "Monitoring is Dead: Long L
 * [A Simpley View of the Dempster-Shafer Theory of Evidence and its Implication for the Rule of Combination](http://people.eecs.berkeley.edu/~zadeh/papers/Dempster-Shafer_1986.pdf)
 * [Fault Detection and Identification in Computer Networks: A Soft Computing Approach](https://uwspace.uwaterloo.ca/bitstream/handle/10012/4905/NFMS_PhD_Thesis_Jan7.pdf)
 * [The Verification of a Distributed System](http://queue.acm.org/detail.cfm?id=2889274)
+* [Trust by Verify: Accountability for Network Services](http://issg.cs.duke.edu/publications/trust-ew04.pdf)
+* [Practical Byzantine Fault Tolerance and Proactive Recovery](http://research.microsoft.com/en-us/um/people/mcastro/publications/p398-castro-bft-tocs.pdf)
+* [The Byzantine Generals Problem](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf)
+
+## Tools
+
+* [Hystrix](https://github.com/Netflix/Hystrix)
+* [Hystrix Dashboard](https://github.com/Netflix/Hystrix/tree/master/hystrix-dashboard)
+* [hystrix-go](https://github.com/afex/hystrix-go)
+* [go-kit](https://github.com/go-kit/kit)
