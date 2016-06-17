@@ -4,7 +4,12 @@ Accompanying respository for my Monitorama 2016 talk "Monitoring is Dead: Long L
 
 ## Abstract
 
-## Reading List
+## References
+
+* [GEMS: Gossip-Enabled Monitoring Service for Scalable Heterogeneous Distributed Systems](http://docs.hcs.ufl.edu/pubs/GEMS2005.pdf)
+* [Implementing Fault-Tolerant Services Using the State Machine Approach: A Tutorial](https://www.cs.cornell.edu/fbs/publications/SMSurvey.pdf)
+
+## Further Reading
 
 * [The Case for Byzantine Fault Detection](https://www.usenix.org/legacy/event/hotdep06/tech/prelim_papers/haeberlen/haeberlen_html/index.html)
 * [A Fault Detection Service for Wide Area Distributed Computations](http://toolkit.globus.org/ftppub/globus/papers/hbm.pdf)
@@ -17,6 +22,8 @@ Accompanying respository for my Monitorama 2016 talk "Monitoring is Dead: Long L
 * [Trust by Verify: Accountability for Network Services](http://issg.cs.duke.edu/publications/trust-ew04.pdf)
 * [Practical Byzantine Fault Tolerance and Proactive Recovery](http://research.microsoft.com/en-us/um/people/mcastro/publications/p398-castro-bft-tocs.pdf)
 * [The Byzantine Generals Problem](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf)
+* [PeerReview: Practical Accountability for Distributed Systems](http://www.sosp2007.org/papers/sosp118-haeberlen.pdf)
+* [BAR Fault Tolerance for Cooperative Services](https://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf)
 
 ## Tools
 
