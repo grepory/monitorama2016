@@ -2,7 +2,7 @@
 
 ## Abstract
 
-> While the sophistication of what they can do has changed, the core abilities of monitoring systems have not kept pace with the software they're being used to monitor. The advent of large, distributed systems made up of many non-uniform interacting components has made the job of operating those systems considerably difficult. Furthermore, it is often people without expertise in how the systems operate that are responsibile for their operation. In this talk, we will explore how our current monitoring capabilities are failing us and discuss how we can .
+> Monitoring systems have not changed significantly in 20 years. Our software is now large distributed systems made up of many non-uniform interacting components while the core functionality of monitoring systems has stagnated. Furthermore, it is often people without expert knowledge of systems under observation that are responsibile for monitoring and operating them. In this talk, we will explore how our current monitoring capabilities are failing us and discuss how we can build systems that are both reliable and observable while making our lives (or the lives of the people responsible for their operations in production) easier.
 
 ## References
 
