@@ -14,12 +14,9 @@
 
 Some of these fall into multiple categories. I left them where I thought they belonged at the time I read them.
 
-### "Required" reading
-
-* [The Byzantine Generals Problem](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf)
-
 ### Fault detection
 
+* [The Byzantine Generals Problem](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf)
 * [The Case for Byzantine Fault Detection](https://www.usenix.org/legacy/event/hotdep06/tech/prelim_papers/haeberlen/haeberlen_html/index.html)
 * [A Fault Detection Service for Wide Area Distributed Computations](http://toolkit.globus.org/ftppub/globus/papers/hbm.pdf)
 * [Fault Detection and Identification in Computer Networks: A Soft Computing Approach](https://uwspace.uwaterloo.ca/bitstream/handle/10012/4905/NFMS_PhD_Thesis_Jan7.pdf)
