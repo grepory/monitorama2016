@@ -71,16 +71,35 @@
   3. Evidence generation
     1. There are many very good talks and papers about this, for examples of this see the README.md
 4. Fault tolerance
-  - If all of this sounds familiar, it's because you've seen it all before, but usually out of context.
   1. Requirements
-    1. Fault detection
-    2. Backup plans
-    3.
-  2. Tools
-    1. Hystrix (fast)
-      1. Circuit breakers
+    - Fault detection
+    - Backup plans
+  2. Fault detection
+    1. Hystrix (Circuit Breakers)
+      1. Circuit breakers (sensors that determine if an external component has "failed")
+        - failure here is defined by operational requirements:
+        - too many errors
+        - cannot connect
+        - latency is too high
       2. Exposing circuit breaker state
+        - Circuit breakers become observable by exposing their state (open, closed) and the sensor readings
+        - Hystrix exposes this via an event stream.
+        - You can monitor that event stream so that action can be taken when a circuit opens.
+				- Other circuit breakers could expose it via an HTTP API, or any way they want.
       3. Ensemble coordination through gossip protocols
-    2. Consul (accurate)
-      1. Service health checks
-      2.
+        - This is something I haven't seen in production yet, but that I want to see.
+        - Circuit breakers could coordinate by gossiping about services
+        - In the simplest form, this would be within a single service (where operational requirements of dependencies are all similar)
+        - There are papers about this in my README.
+    2. Backup plans
+      1. Promises, promises
+        - Promise != promise
+        - Suspect vs. Failed - A service may be suspected of failure (or potential failure), and you can take action on that as well.
+      2. Promise theory
+        - By (sincerely) promising to do something, I will inherently try harder to uphold that promise.
+        - Corrolary: If I know I cannot fulfill a promise (or have good cause to suspect), I should not make that promise.
+        - Apply backpressure.
+      3. Lower-case p promises
+        - Always use promises and always promise to do things.
+        - The worst backup plan I have ever heard of in Hystrix: infinitely queue requests until the service recovers
+        - If you've tripped a circuit breaker on an external dependency, and your only backup plan is to queue a request, you are going to be considered a Known Bad Actor if all you do is continuously queue requests to the failed dependency. Be nice to your neighbors. Let them recover... Try to fulfill less promises if you suspect them of failure (i.e. circuit is still closed, but dependency is suspect).
