@@ -61,7 +61,6 @@
   1. Fault detection
 		- New vocabulary!
 			* Sensors
-				- Sensors
 			* Components
 			* Agents
 			* Systems
