@@ -14,7 +14,7 @@
 			- WARN: something < something else < another thing!
 				- something may be less than something else, but it can be > than it REALLY FAST.
 				- Is this _really_ a warning???
-				- This feels more like a tornado warning--and we know how well those work.
+				- tornado warning: highly unpredictable and ususally too late
 			- CRITICAL: something > something else!
 				- OH GOD IT'S PROBABLY ON FIRE.
 				- Or maybe it's not! Remember our old friend CPU?
@@ -109,11 +109,7 @@
         - Dashboards: still a thing. It can be helpful if you don't understand the operational characteristics of your application to simply visualize them.
         - Logs: logs are still a thing, too. It can be easy to detect faults if your service logs meaningful error messages. Furthermore, these log messages can help diagnose errors.
         - Share information about dependency states: if you know you can't reach your database, you can expose this information in an easy-to-identify manner that allows your monitoring system to add context to an alert. Consider the following simple example: { "okay": false, "dependencies": { "database": { "okay": false }}}. That kind of declarative failure message is a great place to start diagnosis. If you can add additional context about the identity and manner of the dependency, then you've saved yourself some time during troubleshooting.
-  3. Evidence generation
-    - You must have evidence to support your diagnosis
-    - You gather this evidence through tracing, debugging, verification
-    - There are many very good talks and papers about this, for examples of this see the README.md.
-  4. Fault tolerance
+  3. Fault tolerance
     1. Requirements
       - Fault detection
       - Backup plans

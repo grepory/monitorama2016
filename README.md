@@ -9,6 +9,7 @@
 * [GEMS: Gossip-Enabled Monitoring Service for Scalable Heterogeneous Distributed Systems](http://docs.hcs.ufl.edu/pubs/GEMS2005.pdf)
 * [Implementing Fault-Tolerant Services Using the State Machine Approach: A Tutorial](https://www.cs.cornell.edu/fbs/publications/SMSurvey.pdf)
 * [Fault Management in Distributed Systems](http://repository.upenn.edu/cgi/viewcontent.cgi?article=1960&context=cis_reports)
+* [CircuitBreaker](http://martinfowler.com/bliki/CircuitBreaker.html)
 
 ## Further Reading
 
