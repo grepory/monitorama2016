@@ -105,7 +105,7 @@
       1. Make everything that matters observable
         - If it's in your production path, it matters, and it should be observable.
         - If it's open source, and you make it observable, work with the maintainers of the project to get that observability component into the product in a way that everyone can use it.
-			2. Ways to observe
+      2. Ways to observe
         - Dashboards: still a thing. It can be helpful if you don't understand the operational characteristics of your application to simply visualize them.
         - Logs: logs are still a thing, too. It can be easy to detect faults if your service logs meaningful error messages. Furthermore, these log messages can help diagnose errors.
         - Share information about dependency states: if you know you can't reach your database, you can expose this information in an easy-to-identify manner that allows your monitoring system to add context to an alert. Consider the following simple example: { "okay": false, "dependencies": { "database": { "okay": false }}}. That kind of declarative failure message is a great place to start diagnosis. If you can add additional context about the identity and manner of the dependency, then you've saved yourself some time during troubleshooting.
@@ -113,21 +113,21 @@
     - You must have evidence to support your diagnosis
     - You gather this evidence through tracing, debugging, verification
     - There are many very good talks and papers about this, for examples of this see the README.md.
-	4. Fault tolerance
-	  1. Requirements
-	    - Fault detection
-	    - Backup plans
-	  2. Circuit breakers
+  4. Fault tolerance
+    1. Requirements
+      - Fault detection
+      - Backup plans
+    2. Circuit breakers
       1. Circuit breakers (sensors that determine if an external component has "failed")
         - failure here is defined by operational requirements:
-        - too many errors
+        - too many errors (network, not application)
         - cannot connect
         - latency is too high
       2. Exposing circuit breaker state
         - Circuit breakers become observable by exposing their state (open, closed) and the sensor readings
         - Hystrix exposes this via an event stream.
         - You can monitor that event stream so that action can be taken when a circuit opens.
-				- Other circuit breakers could expose it via an HTTP API, or any way they want.
+        - Other circuit breakers could expose it via an HTTP API, or any way they want.
       3. Ensemble coordination through gossip protocols
         - This is something I haven't seen in production yet, but that I want to see.
         - Circuit breakers could coordinate by gossiping about services
@@ -137,20 +137,20 @@
           - with each gossip packet, while updating ensemble membership, members could say they suspect a service as being faulty
           - if enough members vote a service as faulty, then the ensemble could choose to consider that service as unavailable on the whole
           - this would be really cool, because it could inform both the circuit breakers for that external service AND our monitoring system (and thus a human)
-	    3. Backup plans
-	      1. Promises, promises
-	        - Promise != promise
-	        - Suspect vs. Failed - A service may be suspected of failure (or potential failure), and you can take action on that as well.
-	      2. Promise theory
-	        - By (sincerely) promising to do something, I will inherently try harder to uphold that promise.
-	        - Corrolary: If I know I cannot fulfill a promise (or have good cause to suspect), I should not make that promise.
-	        - Apply backpressure.
-	      3. Lower-case p promises
-	        - Always use promises and always promise to do things.
-	        - The worst backup plan I have ever heard of in Hystrix: infinitely queue requests until the service recovers
-	        - If you've tripped a circuit breaker on an external dependency, and your only backup plan is to queue a request, you are going to be considered a Known Bad Actor if all you do is continuously queue requests to the failed dependency. Be nice to your neighbors. Let them recover... Try to fulfill less promises if you suspect them of failure (i.e. circuit is still closed, but dependency is suspect).
+      3. Backup plans
+        1. Promises, promises
+          - Promise != promise
+          - Suspect vs. Failed - A service may be suspected of failure (or potential failure), and you can take action on that as well.
+        2. Promise theory
+          - By (sincerely) promising to do something, I will inherently try harder to uphold that promise.
+          - Corrolary: If I know I cannot fulfill a promise (or have good cause to suspect), I should not make that promise.
+          - Apply backpressure.
+        3. Lower-case p promises
+          - Always use promises and always promise to do things.
+          - The worst backup plan I have ever heard of in Hystrix: infinitely queue requests until the service recovers
+          - If you've tripped a circuit breaker on an external dependency, and your only backup plan is to queue a request, you are going to be considered a Known Bad Actor if all you do is continuously queue requests to the failed dependency. Be nice to your neighbors. Let them recover... Try to fulfill less promises if you suspect them of failure (i.e. circuit is still closed, but dependency is suspect).
 4. Closing remarks
-	- It may seem as though a lot of what I'm advocating requires changes in how we build software. That is absolutely true. I believed this so passionately, that I have changed my career path--leaving operations after many years and moving into software engineering and technical leadership.
-	- This is just how I believe we should do things. I am not advocating that this is a universal truth or even that everyone needs this level of sophistication in their distributed systems. However, building systems like this is easier than you would expect, and there is a _significant_ amount of literature out there that not only tells you why this is how you should build things, but tells you how.
-	- Even if you only have a single service that is deployed as a monolith and only has a single dependency, you can still be fault tolerant of that single dependency, and you should, because we're all building a distributed system together. We all use each other's products. We should all behave as though people use and depend on the things that we build.
-	- I think more and more, that we, as people who are in or come from operations, will have the ability to influence the way that software is built and contribute to its construction ourselves. Thanks again, DevOps movement. As much as I may dislike the Google SRE book (for many and varied reasons, some petty and some not), it does serve a purpose in forwarding the case for embedded operations within software engineering teams. In order to participate in those teams, however, you must be educated in how to build reliable systems. I hope this helps.
+  - It may seem as though a lot of what I'm advocating requires changes in how we build software. That is absolutely true. I believed this so passionately, that I have changed my career path--leaving operations after many years and moving into software engineering and technical leadership.
+  - This is just how I believe we should do things. I am not advocating that this is a universal truth or even that everyone needs this level of sophistication in their distributed systems. However, building systems like this is easier than you would expect, and there is a _significant_ amount of literature out there that not only tells you why this is how you should build things, but tells you how.
+  - Even if you only have a single service that is deployed as a monolith and only has a single dependency, you can still be fault tolerant of that single dependency, and you should, because we're all building a distributed system together. We all use each other's products. We should all behave as though people use and depend on the things that we build.
+  - I think more and more, that we, as people who are in or come from operations, will have the ability to influence the way that software is built and contribute to its construction ourselves. Thanks again, DevOps movement. As much as I may dislike the Google SRE book (for many and varied reasons, some petty and some not), it does serve a purpose in forwarding the case for embedded operations within software engineering teams. In order to participate in those teams, however, you must be educated in how to build reliable systems. I hope this helps.
