@@ -7,7 +7,7 @@
 > systems made up of many non-uniform interacting components while the core
 > functionality of monitoring systems has stagnated.  Furthermore, it is often
 > people without expert knowledge of systems under observation that are
-> responsibile for monitoring and operating them. In this talk, we will explore
+> responsible for monitoring and operating them. In this talk, we will explore
 > how our current monitoring capabilities are failing us and discuss how we can
 > build systems that are both reliable and observable while making our lives
 > (or the lives of the people responsible for their operations in production)
