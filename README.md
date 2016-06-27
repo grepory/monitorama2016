@@ -2,15 +2,16 @@
 
 ## Abstract
 
-> Monitoring systems have not changed significantly in 20 years. Our software
-> is now large distributed systems made up of many non-uniform interacting
-> components while the core functionality of monitoring systems has stagnated.
-> Furthermore, it is often people without expert knowledge of systems under
-> observation that are responsibile for monitoring and operating them. In this
-> talk, we will explore how our current monitoring capabilities are failing us
-> and discuss how we can build systems that are both reliable and observable
-> while making our lives (or the lives of the people responsible for their
-> operations in production) easier.
+> Monitoring systems have not changed significantly in 20 years and has fallen
+> behind the way be build software. Our software is now large distributed
+> systems made up of many non-uniform interacting components while the core
+> functionality of monitoring systems has stagnated.  Furthermore, it is often
+> people without expert knowledge of systems under observation that are
+> responsibile for monitoring and operating them. In this talk, we will explore
+> how our current monitoring capabilities are failing us and discuss how we can
+> build systems that are both reliable and observable while making our lives
+> (or the lives of the people responsible for their operations in production)
+> easier.
 
 ## References
 
