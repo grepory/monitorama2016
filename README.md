@@ -1,5 +1,9 @@
 # Monitoring is Dead: Long Live Monitoring
 
+The video from Monitorama 2016 is live on [Vimeo](https://vimeo.com/173610062) and clickable below. Slides are available on [Speaker Deck](https://speakerdeck.com/grepory/monitoring-is-dead).
+
+[![Watch the talk!](https://cloud.githubusercontent.com/assets/1744971/24878550/761c795a-1de8-11e7-8e83-a18be4b71a78.png)](https://vimeo.com/173610062)
+
 ## Abstract
 
 > Monitoring systems have not changed significantly in 20 years and has fallen
@@ -15,7 +19,7 @@
 
 ## References
 
-1. Fischer, M. [Impossibility of Distributed Concensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf). in Journal of the Association for Computing Machinery, Vol. 32, No. 2, April 1985, pp. 374-382. 
+1. Fischer, M. [Impossibility of Distributed Concensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf). in Journal of the Association for Computing Machinery, Vol. 32, No. 2, April 1985, pp. 374-382.
 2. Lamport, L., Shostak, R., and Pease, M. [The Byzantine Generals Problem](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf). in ACM Transactions on Programming Languages and Systems, Vol. 4, No. 3, July 1982, Pages 382-401.
 3. Poledna, S., Burns, A., Wellings, A., and Barrett, P. [Replica Determinism and Flexible Scheduling in Hard Real-Time Dependable Systems](https://people.cs.pitt.edu/~melhem/courses/3530/papers/ft5.pdf). in IEEE Transactions on Computers, Vol. 49, No. 2, February 2000, Pages 100-111.
 4. Videla, A. [Failure Modes in Distributed Systems](http://videlalvaro.github.io/2013/12/failure-modes-in-distributed-systems.html). in his blog, December 2013.
